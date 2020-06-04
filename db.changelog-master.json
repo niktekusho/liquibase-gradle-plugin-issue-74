@@ -1,0 +1,38 @@
+{
+  "databaseChangeLog": [{
+    "changeSet": {
+      "id": "example.changelog-0010",
+      "logicalFilePath": "example.changelog-0010",
+      "runAlways": false,
+      "changes": [{
+        "createTable": {
+          "tableName": "test_table",
+          "columns": [{
+            "column": {
+              "name": "id",
+              "type": "BIGINT",
+              "encoding": "UTF-8",
+              "autoIncrement": true
+            }
+          }, {
+            "column": {
+              "name": "description",
+              "type": "VARCHAR(50)",
+              "encoding": "UTF-8",
+              "defaultValue": "",
+              "constraints": {
+                "nullable": false
+              }
+            }
+          }]
+        }
+      }, {
+        "addPrimaryKey": {
+          "tableName": "test_table",
+          "constraintName": "pk_test_table",
+          "columnNames": "id"
+        }
+      }]
+    }
+  }]
+}
